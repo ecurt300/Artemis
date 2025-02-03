@@ -19,8 +19,8 @@ Entities:
 
 Database:
 	There exists two databases→ 
-		1 The moon phase database, this contains the moon phase data from the API call to the U.S. Naval Observatory.
-		2 All results→ This is for debugging and logging purposes to show all the results found with the app.
+       1 The moon phase database, this contains the moon phase data from the API call to the U.S. Naval Observatory.
+       2 All results→ This is for debugging and logging purposes to show all the results found with the app.
 
 
 Technical Cont:
