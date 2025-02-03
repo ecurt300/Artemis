@@ -1,4 +1,4 @@
-# Artemis
+# Artemis Moon Phase Calculator
 Moon Phase Calculator: Project Artemis
 About:
 	Where this project came from was that me and my family like to stargaze or look at the moon. We like to know what moon phase it is on the day we look up or days later to find what the next moon phase is. I decided to craft my capstone project around that.
