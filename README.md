@@ -49,7 +49,7 @@ Task List:
       Basic Logic and entity types implemented
 	Console App for the aforementioned features in the about section. 
     • Phase 2
-          Program functionalities listed that require ASP.NET implemented
+          Program functionalities listed that require EF Core implemented
 	    Database Implemented
 	    Begin work on UI integration
     • Phase 3
