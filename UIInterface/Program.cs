@@ -3,6 +3,7 @@ using Artemis;
 using MoonData.Data;
 using MoonData.Domain;
 using Utilities;
+using MoonSearch;
 bool canQuite = false;
 MoonFakeDatabase moonFakeDatabase = new MoonFakeDatabase();
    /*
@@ -14,11 +15,12 @@ moonFakeDatabase.AddToFakeDatabase(new Moon(Phase.WormMoon, new Date(27, 10, 197
 moonFakeDatabase.AddToFakeDatabase(new Moon(Phase.BuckMoon, new Date(27, 10, 1998, 3), 2));
 while (!canQuite)
 {
-    
+    MoonQuery.Instance().FindMoonAndDisplayResults(moonFakeDatabase,new Moon(Phase.WormMoon,new Date(27,10,1978,2),1),Phase.BuckMoon);
    
     CLIUI.Instance().WriteInput("Hello Artemis");
     CLIUI.Instance().WriteInput("Press 1 to quite");
-    Console.WriteLine(moonFakeDatabase.ToString());
+    
+   // Console.WriteLine(moonFakeDatabase.ToString());
 
    
     canQuite = CLIUI.Instance().ContextChoose();
