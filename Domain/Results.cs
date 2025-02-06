@@ -1,26 +1,28 @@
-﻿using System;
+﻿using Moon_Phase_App.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Moon_Phase_App.Domain
+namespace MoonData.Domain
 {
-    public class Results
+    public class Results : EntityBase
     {
         public string UserName { get; set; }
 
-        public Phase moonPhase { get; set; }
+        public Moon moonPhase { get; set; }
 
         public Date moonDate { get; set; }
 
 
 
-        public Results(Phase moonPhase, Date Date, string userName)
+        public Results(Moon moonPhase, Date Date, string userName,int id)
         {
             this.moonPhase = moonPhase;
             UserName = userName;
             moonDate = Date;
+            this.Id = id;
         }
 
         public override string ToString()
