@@ -36,7 +36,16 @@ namespace MoonSearch
             if (date.Year > prevDate.Year)
             {
 
-                dayInc += yearDiff * 360;
+                dayInc += yearDiff * 365;
+            }
+            if(date.LeapYear)
+            {
+                int leapYear = 1;
+                if(leapYear == 1)
+                {
+                    leapYear = 0;
+                }
+                dayInc += yearDiff * 365;
             }
             return dayInc;
         }
