@@ -11,31 +11,29 @@ Features:
 > # Technical:
 
 Entities:
-	> There exists three entities in this program.
-	>	1. Date→ Holds the Day, and Year entered or stored
-	>	2. Moon → Holds the Moon Phase , and a Date object reference.
-	>	3. Moon Results→ Holds the Moon , and Date data of the found moon phase and date.
+> There exists three entities in this program.	
+>	1. Date→ Holds the Day, and Year entered or stored
+>	2. Moon → Holds the Moon Phase , and a Date object reference.
+>	3. Moon Results→ Holds the Moon , and Date data of the found moon phase and date.
 
 Database:
 	There exists two databases→ 
        1 The moon phase database, this contains the moon phase data from the API call to the U.S. Naval Observatory.
        2 All results→ This is for debugging and logging purposes to show all the results found with the app.
 
-
-> # Technical Cont:
 > * Two versions of the Interface will be made:
 	>1. 	Version 0 console version that will allow users to enter in the desired moon phase and date.			
    > 1. 	Version 1 Web App Mudblazor Web App with all the underneath features implemented interfaced with Mudblazor.
 
-Technologies and APIs:
+> # Technologies and APIs:
 	Languages:
 		C#
 	Tools:
 		VS Studio 2022
 	Frameworks:
-		EFCore for entities and Database Management
-		SQLite for Storing Entities
-		Mudblazor for User Interface
+> * EFCore for entities and Database Management
+> *		SQLite for Storing Entities
+> *		Mudblazor for User Interface and Web
 
 Task List:
 
@@ -56,7 +54,7 @@ Task List:
 	
 Capstone Project Feature To Be Implemented
 
-Based on what is needed and the functionalities of the project I have determined this will meet the following.
+Based on what is needed and the functionalities of the project I have determined this will meet the following:
 
 
 >---
