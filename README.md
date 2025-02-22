@@ -24,8 +24,8 @@ Database:
 
 > # Technical Cont:
 > * Two versions of the Interface will be made:
-	>1. 	Version 0 console version that will allow users to enter in the desired moon phase and date.			
-   > 1. 	Version 1 Web App Mudblazor Web App with all the underneath 		features implemented interfaced with Mudblazor.
+>1. 	Version 0 console version that will allow users to enter in the desired moon phase and date.			
+ > 1. 	Version 1 Web App Mudblazor Web App with all the underneath features implemented interfaced with Mudblazor.
 
 Technologies and APIs:
 	Languages:
