@@ -24,8 +24,8 @@ Database:
 
 > # Technical Cont:
 > * Two versions of the Interface will be made:
->1. 	Version 0 console version that will allow users to enter in the desired moon phase and date.			
- > 1. 	Version 1 Web App Mudblazor Web App with all the underneath features implemented interfaced with Mudblazor.
+	>1. 	Version 0 console version that will allow users to enter in the desired moon phase and date.			
+   > 1. 	Version 1 Web App Mudblazor Web App with all the underneath 		features implemented interfaced with Mudblazor.
 
 Technologies and APIs:
 	Languages:
@@ -59,11 +59,13 @@ Capstone Project Feature To Be Implemented
 Based on what is needed and the functionalities of the project I have determined this will meet the following.
 
 
->  | Feature 		|	     Difficulty|
->  :----:				:---:
-> * CRUD(Create, Read, and Update) -Medium/Hard
-> * Three Unit Tests -Easy
-> * Comments -Easy
-> * Two or more Tables -Hard
-> * List or Dictionary added -Easy
-> * Regex - Medium
+>---
+> | Feature | Difficulty |
+>--
+> CRUD(Create, Read, and Update) -Medium/Hard
+>  Three Unit Tests -Easy
+>  Comments -Easy
+>  Two or more Tables -Hard
+>   List or Dictionary added -Easy
+>   Regex - Medium
+>   --
