@@ -11,10 +11,10 @@ Features:
 > # Technical:
 
 Entities:
-	There exists three entities in this program.
-		1 Date→ Holds the Day, and Year entered or stored
-		2 Moon → Holds the Moon Phase , and a Date object reference.
-		3 Moon Results→ Holds the Moon , and Date data of the found moon phase and date.
+	> There exists three entities in this program.
+	>	1. Date→ Holds the Day, and Year entered or stored
+	>	2. Moon → Holds the Moon Phase , and a Date object reference.
+	>	3. Moon Results→ Holds the Moon , and Date data of the found moon phase and date.
 
 Database:
 	There exists two databases→ 
