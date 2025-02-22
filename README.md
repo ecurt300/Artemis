@@ -59,7 +59,7 @@ Capstone Project Feature To Be Implemented
 Based on what is needed and the functionalities of the project I have determined this will meet the following.
 
 
-Feature |Difficulty
+Feature |			Difficulty
 CRUD(Create, Read, and Update) -Medium/Hard
 Three Unit Tests -Easy
 Comments -Easy
