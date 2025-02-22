@@ -59,10 +59,10 @@ Capstone Project Feature To Be Implemented
 Based on what is needed and the functionalities of the project I have determined this will meet the following.
 
 
-Feature |			Difficulty
-CRUD(Create, Read, and Update) -Medium/Hard
-Three Unit Tests -Easy
-Comments -Easy
-Two or more Tables -Hard
-List or Dictionary added -Easy
-Regex - Medium
+> Feature |			Difficulty
+> * CRUD(Create, Read, and Update) -Medium/Hard
+> * Three Unit Tests -Easy
+> * Comments -Easy
+> * Two or more Tables -Hard
+> * List or Dictionary added -Easy
+> * Regex - Medium
