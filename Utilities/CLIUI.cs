@@ -20,7 +20,7 @@ namespace Utilities
 
 
         //Some Basic Console Helper Functions for testing EFcore and the logic of the App.
-        public bool ContextChoose()
+        public Task< bool> ContextChoose()
         {
 
             string? input = Console.ReadLine()?.Trim().ToLower();
@@ -29,21 +29,22 @@ namespace Utilities
 
             if (stringInput == 1)
             {
-                return true;
+                return Task.FromResult(true);
             }
-            return false;
+            return Task.FromResult(false);
         }
         
-        public void WriteInput(string input)
+        public async Task  WriteInput(string input)
         {
             var textToDisplay = input.Trim();
-            Console.WriteLine(textToDisplay);
+             Console.WriteLine(textToDisplay);
+            await Task.Delay(1000);
         }
-        public string GetInput(string input)
+        public Task<string> GetInput(string input)
         {
             var stringInput = input.Trim().ToLower();
 
-            return stringInput;
+            return Task.FromResult( stringInput);
         }
         public int GetInputInteger()
         {

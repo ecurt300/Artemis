@@ -1,15 +1,16 @@
-﻿using Artemis;
-using MoonData.Data;
+﻿
+
 using MoonData.Domain;
 using Utilities;
 namespace MoonSearch
 {
+
     /*
      * MoonSearch is where the meat of the program lives. This is where the moondatabase is queried based on the calculated date found from the index of the date entered in
      * Basically counts up from the current id until the that specific moon is found then it displays the number of days until that next moonphase.
      * A dictionary of moons are filled from a list created from filling moonphase data from moon database. TODO: Should use date and time of .net library since we need 
      * leap year calculation 
-     */
+     *
     public class MoonQuery
     {
 
@@ -72,13 +73,13 @@ namespace MoonSearch
             }
             return dayInc;
         }
-        public void FindMoonAndDisplayResults(MoonFakeDatabase database, Moon currentMoon, Phase targetPhase)
+        public void FindMoonAndDisplayResults(MoonRepository database, Moon currentMoon, Phase targetPhase)
         {
             int results = FindMoon(database,currentMoon,targetPhase);
             CLIUI.Instance().WriteInput($"The Moon Phase of {targetPhase} is {results} many days from now ");
         }
 
-        private int FindMoon(MoonFakeDatabase database, Moon currentMoon, Phase targetPhase)
+        private int FindMoon(MoonRepository database, Moon currentMoon, Phase targetPhase)
         {
            
       
@@ -101,3 +102,5 @@ namespace MoonSearch
     }
 }
 
+    */
+}
