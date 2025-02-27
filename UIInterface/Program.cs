@@ -7,12 +7,13 @@ using Utilities;
 using Moon_Phase_App.Data;
 using Microsoft.Extensions.DependencyInjection;
 using Moon_Phase_App.Domain;
+using Artemis.Logic;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        bool canQuite = false;
+
 
         /*
         * Quick Values such for some nonsense dates for testing
@@ -27,38 +28,19 @@ internal class Program
         *    After this is replace console UI with mudblazor App-Yikes
         */
 
-
-
-
-
-
-
-        MoonContext context = new MoonContext();
-
-
-        using var moonDB = new MoonContext();
-  
-
-        // Console.WriteLine(moonFakeDatabase.ToString());
-        var services = new ServiceCollection();
+        IServiceCollection services = new ServiceCollection();
         Application application = new Application(services);
-        var moonService = application.Services.GetRequiredService<IMoonService>();
-        //Loop through all moons from 1700 to 2100 this is 400 years
-        //var moons = moonService.LoopThroughYears(400);
-
-   
-        
-  
-        while (true)
+        MoonLogic moonLogic = new MoonLogic();
+        moonLogic.InitializeDatabase(application);
+        bool update = true;
+        while (update)
         {
-            foreach (var moon in moonDB.moons)
-            {
-               
-                Console.WriteLine(moon.ToString());
-            }
-
-            Console.ReadKey();
-
+          moonLogic.CalculateMoon(application);
+          update = false;
+           
         }
+        moonLogic.ClearDataBase(application);
+
+     
     }
 }
