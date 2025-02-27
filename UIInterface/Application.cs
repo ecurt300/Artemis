@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.ComponentModel;
 using Moon_Phase_App.Domain;
+using Moon_Phase_App.Data;
 namespace Artemis
 {
     public class Application
@@ -22,6 +23,7 @@ namespace Artemis
         private void ConfigureServices(IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<IMoonService,MoonsService>();
+            serviceCollection.AddTransient<IMoonPhaseRepository, MoonPhaseRepository>();
         }
 
     }
