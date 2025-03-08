@@ -14,7 +14,7 @@ namespace MoonData.Domain
     
     public class Moon
     {
-        [JsonProperty(PropertyName = "id")]
+    
         public int ID { get; set; }
         [JsonProperty("year")]
        
@@ -38,6 +38,10 @@ namespace MoonData.Domain
             this.Month = Month;
             this.Day = Day;
             this.Phase = phase;
+        }
+        public Moon()
+        {
+            
         }
         public override string ToString()
         {

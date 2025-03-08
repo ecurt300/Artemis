@@ -40,8 +40,9 @@ internal class Program
         bool update = true;
         while (update)
         {
-          moonLogic.CalculateMoon(application,27,10,2021);
-          update = false;
+            
+            moonLogic.CalculateMoon(application,5,1,1700);
+            break;
            
         }
         moonLogic.ClearDataBase(application);

@@ -37,13 +37,13 @@ namespace Moon_Phase_App.Domain
                     {
                         moons.AddRange(phaseList.moons);
                     }
-                    // Console.WriteLine("Moon Added");
+                   
 
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                //Console.WriteLine(ex.Message);
             }
             return moons;
         }
@@ -61,7 +61,7 @@ namespace Moon_Phase_App.Domain
                 ListOFMoonList.AddRange(GetMoonData(1700 + i).Result);
                 currentMoonIndex++;
                 moonPercentage = ((double)currentMoonIndex / (double)numOfYears) * 100;
-                Console.WriteLine($"moon percentage {moonPercentage}");
+                Console.WriteLine(moonPercentage);
             }
          
             return ListOFMoonList;

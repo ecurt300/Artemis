@@ -21,7 +21,7 @@ namespace Artemis.Logic
             //Start from 1700 to 2100 (400 years)
 
             var id = 0;
-            var years = 4;
+            var years = 5;
             var moonService = application.Services.GetService<IMoonService>();
             var moonPhaseRepository = application.Services.GetService<IMoonPhaseRepository>();
             var moons = moonService?.LoopThroughYears(years);
@@ -30,6 +30,7 @@ namespace Artemis.Logic
             {
                 foreach (Moon moon in moons)
                 {
+                    
                     id++;
                     moon.ID = id;
                     moonPhaseRepository?.AddMoon(moon);
@@ -43,20 +44,29 @@ namespace Artemis.Logic
         {
             int dayCount = 0;
             string fullMoon = "Full Moon";
-            Console.WriteLine(day);
+            Moon? target = null;
             DateTime currentDate = new DateTime((year), (month), (day));
             var moonPhaseRepository = application.Services.GetService<IMoonPhaseRepository>();
-            if (moonPhaseRepository != null)
-            {
+           
                 int counter = moonPhaseRepository.GetMoonByDate(currentDate).ID;
+             
                 int moonCount = moonPhaseRepository.GetAll().ToArray<Moon>().Length;
                 bool found = false;
-                Moon? target = null;
+              
+               
+
                 while (counter <= moonCount || found)
                 {
                     target = moonPhaseRepository.GeMoonByID(counter);
+
                     found = target.Phase == fullMoon;
-                    counter++;
+                    
+                counter++;
+                if (counter == moonCount)
+                {
+                    break;
+                }
+                  
                 }
 
                 //Count up the number of days until the next fullmoon 
@@ -68,7 +78,7 @@ namespace Artemis.Logic
                     dayCount = Math.Abs(targetDate.Subtract(currentDate).Days);
                 }
                 Console.WriteLine($"There are {dayCount} days until the next full moon from today.");
-            }
+            
         }
         //On the UI(Mud Blazor) the user enters this into a text box that is read into a string then fed into the query
 

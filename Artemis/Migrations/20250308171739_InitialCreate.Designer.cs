@@ -10,7 +10,7 @@ using Moon_Phase_App.Data;
 namespace Moon_Phase_App.Migrations
 {
     [DbContext(typeof(MoonContext))]
-    [Migration("20250227195438_InitialCreate")]
+    [Migration("20250308171739_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -22,24 +22,23 @@ namespace Moon_Phase_App.Migrations
             modelBuilder.Entity("MoonData.Domain.Moon", b =>
                 {
                     b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Day")
+                    b.Property<string>("Year")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Month")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Day")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Phase")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Year")
-                        .HasColumnType("TEXT");
+                    b.HasKey("ID", "Year", "Month", "Day");
 
-                    b.HasKey("ID");
-
-                    b.ToTable("Moon");
+                    b.ToTable("Moons");
                 });
 #pragma warning restore 612, 618
         }

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Artemis
 {
     
-   public class MoonPhaseRepository :IMoonPhaseRepository
+   public class MoonPhaseRepository : IMoonPhaseRepository
     {
 
 
@@ -26,7 +26,7 @@ namespace Artemis
         {
             if (!moonContext.Set<Moon>().Contains(moon))
             {
-                moonContext.Set<Moon>().Add(moon);
+                moonContext.Add(moon);
                 moonContext.SaveChanges();
             }
            
@@ -34,17 +34,17 @@ namespace Artemis
 
         public void DeleteMoon(int id)
         {
-            var moon = moonContext.Set<Moon>().Find(id);
-            if (moon != null)
+            var moonTodelete = (from moon in moonContext.Set<Moon>() orderby id select moon).First();
+            if (moonTodelete != null)
             {
-                moonContext.Set<Moon>().Remove(moon);
+                moonContext.Set<Moon>().Remove(moonTodelete);
                 moonContext.SaveChanges();
             }
         }
 
         public Moon? GeMoonByID(int id)
         {
-            return moonContext.Set<Moon>().Find(id);
+            return (from moon in moonContext.Set<Moon>() orderby id select moon).First();
         }
 
         public IEnumerable<Moon> GetAll()
@@ -57,8 +57,11 @@ namespace Artemis
             string? day = $"{date.Date.Day}";
             string? month = $"{date.Date.Month}";
             string? year = $"{date.Date.Year}";
-            Moon moon = (Moon)moonContext.Set<Moon>().Where(m=> m.Day == day).Where(m=> m.Month == month).Where(m => m.Year == year).FirstOrDefault();
-            return moon;
+
+            var moonQuery = moonContext.Set<Moon>();
+           
+            
+            return moonQuery.First();
         }
 
         public void UpdateMoon(Moon moon)
