@@ -41,8 +41,8 @@ internal class Program
         while (update)
         {
             
-            moonLogic.CalculateMoon(application,5,1,1700);
-            break;
+            ;
+            update = !moonLogic.CalculateMoon(application, 5, 1, 1700);
            
         }
         moonLogic.ClearDataBase(application);

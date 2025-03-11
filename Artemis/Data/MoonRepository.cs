@@ -35,11 +35,13 @@ namespace Artemis
         public void DeleteMoon(int id)
         {
             var moonTodelete = (from moon in moonContext.Set<Moon>() orderby id select moon).First();
+         
             if (moonTodelete != null)
             {
                 moonContext.Set<Moon>().Remove(moonTodelete);
-                moonContext.SaveChanges();
+                
             }
+            moonContext.SaveChanges();
         }
 
         public Moon? GeMoonByID(int id)

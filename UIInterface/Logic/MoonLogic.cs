@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,15 +14,15 @@ namespace Artemis.Logic
 {
     public class MoonLogic
     {
-      
+
         //Add Moons To Database on Run
-       
+        bool found = false;
         public void InitializeDatabase(Application application)
         {
             //Start from 1700 to 2100 (400 years)
 
             var id = 0;
-            var years = 5;
+            var years = 1;
             var moonService = application.Services.GetService<IMoonService>();
             var moonPhaseRepository = application.Services.GetService<IMoonPhaseRepository>();
             var moons = moonService?.LoopThroughYears(years);
@@ -35,50 +36,56 @@ namespace Artemis.Logic
                     moon.ID = id;
                     moonPhaseRepository?.AddMoon(moon);
                 }
+               
             }
         }
 
         //Enter the Date find the next full moon from that entered date display how many days left until that fullmoon-> Make this async
 
-        public void CalculateMoon(Application application, int day, int month, int year)
+        public bool CalculateMoon(Application application, int day, int month, int year)
         {
             int dayCount = 0;
+            var moonPhaseRepository = application.Services.GetService<IMoonPhaseRepository>();
+            
             string fullMoon = "Full Moon";
             Moon? target = null;
+            
             DateTime currentDate = new DateTime((year), (month), (day));
-            var moonPhaseRepository = application.Services.GetService<IMoonPhaseRepository>();
            
-                int counter = moonPhaseRepository.GetMoonByDate(currentDate).ID;
-             
-                int moonCount = moonPhaseRepository.GetAll().ToArray<Moon>().Length;
-                bool found = false;
-              
-               
+            Moon currentMoon = moonPhaseRepository.GetMoonByDate(currentDate);
+            int counter = currentMoon.ID;
 
-                while (counter <= moonCount || found)
-                {
-                    target = moonPhaseRepository.GeMoonByID(counter);
+            int moonCount = moonPhaseRepository.GetAll().ToArray<Moon>().Length;
+            
 
-                    found = target.Phase == fullMoon;
-                    
-                counter++;
-                if (counter == moonCount)
-                {
-                    break;
-                }
-                  
-                }
+            Console.WriteLine(moonCount);
+
+            if (counter <= moonCount || found)
+            {
+                target = moonPhaseRepository.GeMoonByID(counter);
+                
+                
+                    found = target.Phase == "Full Moon" && !target.Equals(currentMoon);
+
+                    counter++;
+                    Console.WriteLine(found);
+
+                
+            }
 
                 //Count up the number of days until the next fullmoon 
                 if (target != null)
                 {
 
                     DateTime targetDate = new DateTime(int.Parse(target.Year), int.Parse(target.Month), int.Parse(target.Day));
-
-                    dayCount = Math.Abs(targetDate.Subtract(currentDate).Days);
+                    Console.WriteLine(target.ToString());
+                    dayCount = (targetDate.Subtract(currentDate).Days);
+                     Console.WriteLine($"There are {dayCount} days until the next full moon from today.");
+                    return true;
                 }
-                Console.WriteLine($"There are {dayCount} days until the next full moon from today.");
-            
+ 
+               
+                return false;
         }
         //On the UI(Mud Blazor) the user enters this into a text box that is read into a string then fed into the query
 
@@ -86,10 +93,8 @@ namespace Artemis.Logic
         public void ClearDataBase(Application application)
         {
             var moonPhaseRepository = application.Services.GetService<IMoonPhaseRepository>();
-            for(int i = 0;i < moonPhaseRepository.GetAll().Count();i++)
-            {
-                moonPhaseRepository?.DeleteMoon(i);
-            }
+            moonPhaseRepository.GetAll().ToList().Clear();
+
         }
         
     }
