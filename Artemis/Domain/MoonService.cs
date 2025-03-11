@@ -36,6 +36,7 @@ namespace Moon_Phase_App.Domain
                     if (phaseList != null)
                     {
                         moons.AddRange(phaseList.moons);
+                        
                     }
                    
 
@@ -43,7 +44,7 @@ namespace Moon_Phase_App.Domain
             }
             catch (Exception ex)
             {
-                //Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             return moons;
         }
