@@ -46,7 +46,7 @@ namespace Artemis
 
         public Moon? GeMoonByID(int id)
         {
-            return (from moon in moonContext.Set<Moon>() orderby id select moon).First();
+            return (from moon in moonContext.Set<Moon>() where moon.ID == id select moon).First();
         }
 
         public IEnumerable<Moon> GetAll()
@@ -60,10 +60,10 @@ namespace Artemis
             string? month = $"{date.Date.Month}";
             string? year = $"{date.Date.Year}";
 
-            var moonQuery = moonContext.Set<Moon>();
-           
+            var moonQuery = (from moon in moonContext.Set<Moon>() where moon.Year == year where moon.Month == month where moon.Year == year select new { moon }  );
             
-            return moonQuery.First();
+
+            return moonQuery.First().moon;
         }
 
         public void UpdateMoon(Moon moon)

@@ -53,36 +53,50 @@ namespace Artemis.Logic
             DateTime currentDate = new DateTime((year), (month), (day));
            
             Moon currentMoon = moonPhaseRepository.GetMoonByDate(currentDate);
+
             int counter = currentMoon.ID;
 
             int moonCount = moonPhaseRepository.GetAll().ToArray<Moon>().Length;
             
 
-            Console.WriteLine(moonCount);
+            
 
-            if (counter <= moonCount || found)
+            while (counter < moonCount)
             {
-                target = moonPhaseRepository.GeMoonByID(counter);
-                
-                
-                    found = target.Phase == "Full Moon" && !target.Equals(currentMoon);
+                     target = moonPhaseRepository.GeMoonByID(counter);
+
+               
 
                     counter++;
-                    Console.WriteLine(found);
+                    found = target.Phase == "Full Moon";
+                    Console.WriteLine( "counter" + counter);
+                    if (found)
+                    {
+                        break;
+                    }
+                   
+                 
 
                 
             }
 
-                //Count up the number of days until the next fullmoon 
-                if (target != null)
-                {
+            //Count up the number of days until the next fullmoon 
+            if (target != null)
+            {
 
-                    DateTime targetDate = new DateTime(int.Parse(target.Year), int.Parse(target.Month), int.Parse(target.Day));
+
+                DateTime targetDate = new DateTime(int.Parse(target.Year), int.Parse(target.Month), int.Parse(target.Day));
+
+              
+
                     Console.WriteLine(target.ToString());
                     dayCount = (targetDate.Subtract(currentDate).Days);
-                     Console.WriteLine($"There are {dayCount} days until the next full moon from today.");
+                    Console.WriteLine($"There are {dayCount} days until the next full moon from today.");
                     return true;
-                }
+            }
+            
+               
+            
  
                
                 return false;
