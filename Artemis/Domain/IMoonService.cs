@@ -9,7 +9,7 @@ namespace Moon_Phase_App.Domain
 {
     public interface IMoonService
     {
-
+        public double moonProgress {  get; set; }
         public Task<IEnumerable<Moon>> GetMoonData(int year);
         public IEnumerable<Moon> LoopThroughYears(int numOfYears);
     }

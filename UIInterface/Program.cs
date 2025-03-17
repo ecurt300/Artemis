@@ -9,10 +9,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Moon_Phase_App.Domain;
 using Artemis.Logic;
 
+
+
+
 internal class Program
 {
+    
     private static void Main(string[] args)
     {
+
 
 
         /*
@@ -32,7 +37,8 @@ internal class Program
          * Test the moon Calculation 
          * Make a UI console thing
          * 
-         */
+         * As of 3/12/2025 - Do WPF
+        
         IServiceCollection services = new ServiceCollection();
         Application application = new Application(services);
         MoonLogic moonLogic = new MoonLogic();
@@ -45,8 +51,10 @@ internal class Program
             update = !moonLogic.CalculateMoon(application,22,8, 1700);
            
         }
-        moonLogic.ClearDataBase(application);
+         moonLogic.ClearDataBase(application);
+         */
 
-     
+
+
     }
 }

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonSearch", "..\MoonSearch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoonTests", "..\MoonTests\MoonTests.csproj", "{21958920-AB3D-4DB3-ABA6-AFAEF6EBE002}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artemis App", "..\Artemis App\Artemis App.csproj", "{81B41EEB-2734-40CB-A721-3AF4C42939D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,12 @@ Global
 		{21958920-AB3D-4DB3-ABA6-AFAEF6EBE002}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21958920-AB3D-4DB3-ABA6-AFAEF6EBE002}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21958920-AB3D-4DB3-ABA6-AFAEF6EBE002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B41EEB-2734-40CB-A721-3AF4C42939D5}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{81B41EEB-2734-40CB-A721-3AF4C42939D5}.Debug|Any CPU.Build.0 = Debug|x64
+		{81B41EEB-2734-40CB-A721-3AF4C42939D5}.Debug|Any CPU.Deploy.0 = Debug|x64
+		{81B41EEB-2734-40CB-A721-3AF4C42939D5}.Release|Any CPU.ActiveCfg = Release|x64
+		{81B41EEB-2734-40CB-A721-3AF4C42939D5}.Release|Any CPU.Build.0 = Release|x64
+		{81B41EEB-2734-40CB-A721-3AF4C42939D5}.Release|Any CPU.Deploy.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

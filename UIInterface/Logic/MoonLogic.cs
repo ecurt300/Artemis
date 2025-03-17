@@ -18,6 +18,8 @@ namespace Artemis.Logic
         //Add Moons To Database on Run
         bool found = false;
         bool databaseFull = false;
+        public double progress { get; set; }
+        
         public void InitializeDatabase(Application application)
         {
             //Start from 1700 to 2100 (400 * 2 years)
@@ -27,8 +29,8 @@ namespace Artemis.Logic
             var moonService = application.Services.GetService<IMoonService>();
             var moonPhaseRepository = application.Services.GetService<IMoonPhaseRepository>();
             var moons = moonService?.LoopThroughYears(years);
-
-            Console.WriteLine(moons.ToArray().Length);
+            
+            
             if (moons != null && !databaseFull)
             {
                 foreach (Moon moon in moons)
@@ -41,6 +43,7 @@ namespace Artemis.Logic
                
             }
             databaseFull = moons.ToList().Count == years * 2;
+            progress = moonService.moonProgress;
         }
 
         //Enter the Date find the next full moon from that entered date display how many days left until that fullmoon-> Make this async

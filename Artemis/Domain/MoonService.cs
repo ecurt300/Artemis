@@ -14,7 +14,8 @@ namespace Moon_Phase_App.Domain
     
     public class MoonsService : IMoonService
     {
-       
+        public double moonProgress { get; set; }
+
         public async Task<IEnumerable<Moon>> GetMoonData(int year)
         {
             
@@ -62,7 +63,8 @@ namespace Moon_Phase_App.Domain
                 ListOFMoonList.AddRange(GetMoonData(1700 + i).Result);
                 currentMoonIndex++;
                 moonPercentage = ((double)currentMoonIndex / (double)numOfYears) * 100;
-                Console.WriteLine(moonPercentage);
+                moonProgress = moonPercentage;
+                
             }
          
             return ListOFMoonList;

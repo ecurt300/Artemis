@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Artemis_App.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Artemis_App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Artemis App">
+
+    <Border>
+       
+        <StackPanel>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" >
+                <TextBlock x:Name="Title" Text="Artemis Full Moon Calculator" FontSize="45" Foreground="AliceBlue"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <TextBlock x:Name="Instructions" FontStyle="Oblique" Text="Enter the date and press calculate to find the next full moon!" FontSize="25" Foreground="BlueViolet"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                <TextBox x:Name="DateEntry" Width="250" Height="15"></TextBox>
+             
+            </StackPanel>
+            <RelativePanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                <TextBlock x:Name="Answer" Text="There are 2 days left until the next fullmoon." ></TextBlock>
+            </RelativePanel>
+            <StackPanel.Background>
+                
+                <ImageBrush ImageSource="/Assets/GSFC_20171208_Archive_e001982~orig.png.jpg" />
+                
+            </StackPanel.Background>
+          
+        </StackPanel>
+      
+    </Border>
+ 
+</Window>

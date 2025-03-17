@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ArtemisApp (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ArtemisApp (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
