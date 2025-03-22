@@ -48,11 +48,11 @@ namespace Artemis.Logic
 
         //Enter the Date find the next full moon from that entered date display how many days left until that fullmoon-> Make this async
 
-        public bool CalculateMoon(Application application, int day, int month, int year)
+        public string CalculateMoon(Application application, int day, int month, int year)
         {
             int dayCount = 0;
             var moonPhaseRepository = application.Services.GetService<IMoonPhaseRepository>();
-            
+            //Not the best way but we are pressed for time.
             string fullMoon = "Full Moon";
             Moon? target = null;
             
@@ -75,7 +75,7 @@ namespace Artemis.Logic
 
                     counter++;
                     found = target.Phase == "Full Moon";
-                    Console.WriteLine( "counter" + counter);
+                    
                     if (found)
                     {
                         break;
@@ -91,21 +91,17 @@ namespace Artemis.Logic
             {
 
 
-                DateTime targetDate = new DateTime(int.Parse(target.Year), int.Parse(target.Month), int.Parse(target.Day));
+                    DateTime targetDate = new DateTime(int.Parse(target.Year), int.Parse(target.Month), int.Parse(target.Day));
 
               
 
                     Console.WriteLine(target.ToString());
                     dayCount = (targetDate.Subtract(currentDate).Days);
-                    Console.WriteLine($"There are {dayCount} days until the next full moon from today.");
-                    return true;
+                    
+                    
             }
             
-               
-            
- 
-               
-                return false;
+             return ($"There are {dayCount} days until the next full moon from today.");
         }
         //On the UI(Mud Blazor) the user enters this into a text box that is read into a string then fed into the query
 
