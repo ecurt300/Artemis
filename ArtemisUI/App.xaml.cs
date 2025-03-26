@@ -19,7 +19,7 @@ using Windows.Foundation.Collections;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace Artemis_App
+namespace ArtemisUI
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -41,7 +41,7 @@ namespace Artemis_App
         /// <param name="args">Details about the launch request and process.</param>
         protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
-            m_window = new MainWindow1();
+            m_window = new MainWindow();
             m_window.Activate();
         }
 

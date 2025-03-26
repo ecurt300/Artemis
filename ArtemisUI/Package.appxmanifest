@@ -8,14 +8,14 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="a0631ab9-4e6e-4eef-b39e-d35d46ceedca"
+    Name="1cd903eb-5a5d-4109-a0da-2717e895e2dd"
     Publisher="CN=Edward"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="a0631ab9-4e6e-4eef-b39e-d35d46ceedca" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="1cd903eb-5a5d-4109-a0da-2717e895e2dd" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Artemis App</DisplayName>
+    <DisplayName>ArtemisUI</DisplayName>
     <PublisherDisplayName>Edward</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -34,8 +34,8 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="Artemis App"
-        Description="Artemis App"
+        DisplayName="ArtemisUI"
+        Description="ArtemisUI"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="ArtemisUI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ArtemisUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="ArtemisUI">
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Button x:Name="InitiliazeDataBase" Click="InitiliazeDataBase_Click">Click To Intitialize Database</Button>
+        <Button x:Name="ClearDataBase" Click="ClearDataBase_Click">Click To Clear Database</Button>
+        <TextBox x:Name="Day" Width="76" Height="56"></TextBox>
+        <TextBox x:Name="Month" Width="76" Height="56"></TextBox>
+        <TextBox x:Name="Year" Width="76" Height="56"></TextBox>
+        <Button x:Name="FindNextFullMoon" Click="FindNextFullMoon_Click">Find FullMoon</Button>    
+    </StackPanel>
+
+    
+</Window>
