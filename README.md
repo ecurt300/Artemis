@@ -11,15 +11,12 @@ Features:
 > # Technical:
 
 Entities:
-> There exists three entities in this program.	
->	1. Date→ Holds the Day, and Year entered or stored
->	2. Moon → Holds the Moon Phase , and a Date object reference.
->	3. Moon Results→ Holds the Moon , and Date data of the found moon phase and date.
+> There exists one entity in this program.	
+>	1. Moon → Holds the Moon Phase , and a Date object reference.
 
 Database:
-	There exists two databases:
+	There exists one database:
 > * 1. The moon phase database, this contains the moon phase data from the API call to the U.S. Naval Observatory.
-  > *  2.  All results→ This is for debugging and logging purposes to show all the results found with the app.
 
 > * Two versions of the Interface will be made:
 > * 	Version 0 console version that will allow users to enter in the desired moon phase and date.			
