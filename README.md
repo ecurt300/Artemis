@@ -68,15 +68,14 @@ Based on what is needed and the functionalities of the project I have determined
 >   --
 >
 How to run:
-*1 Download the VS Studio 2022 solution and clone to your desktop.
-*2 Run the vs studio 2022 command line run the following:
-	#dotnet ef migrations add InitialCreate to create the migration
- 	#dotnet ef database update to create the database
-  	#make sure you have the Moons.db in your userpath 
-* Running the app:
-	#Run the program by running ArtemisUI in the app 
- 	
-  	#The UI is not the pretteist atm. But there exists two buttons
+>*1 Download the VS Studio 2022 solution and clone to your desktop.
+>*2 Run the vs studio 2022 command line run the following:
+#dotnet ef migrations add InitialCreate to create the migration
+#dotnet ef database update to create the database
+#make sure you have the Moons.db in your userpath 
+>* Running the app:
+#Run the program by running ArtemisUI in the app
+#The UI is not the pretteist atm. But there exists two buttons
 <img widt<img width="224" alt="RunArtemis" src="https://github.com/user-attachments/assets/6b665020-f70d-4097-ac6d-9ff6ef1ef70c" />
 h="236" alt="Instructions" src="https://github.com/user-attachments/assets/ff330a9b-743a-430d-97d3-1b5126ea0f65" />
 Make sure to use db browser to ensure the database is filled.
