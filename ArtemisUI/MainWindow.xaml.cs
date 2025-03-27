@@ -61,10 +61,11 @@ namespace ArtemisUI
         {
         
          
-            var day = int.Parse(Day.Text);
+            var day =   int.Parse(Day.Text);
             var month = int.Parse(Month.Text);
-            var year = int.Parse(Year.Text);
-            moonLogic.CalculateMoon(application, day, month, year);
+            var year =  int.Parse(Year.Text);
+            
+            FullMoonAnswer.Text = moonLogic.CalculateMoon(application, day, month, year);
 
         }
     }

@@ -15,7 +15,9 @@
         <TextBox x:Name="Day" Width="76" Height="56"></TextBox>
         <TextBox x:Name="Month" Width="76" Height="56"></TextBox>
         <TextBox x:Name="Year" Width="76" Height="56"></TextBox>
-        <Button x:Name="FindNextFullMoon" Click="FindNextFullMoon_Click">Find FullMoon</Button>    
+        <TextBlock x:Name="FullMoon" Width="176" Height="76" Text="Click Here to Find FullMoon"></TextBlock>
+        <Button x:Name="FindNextFullMoon" Click="FindNextFullMoon_Click">Find FullMoon</Button>
+        <TextBlock x:Name="FullMoonAnswer" Width="120" Height="76"></TextBlock>
     </StackPanel>
 
     
