@@ -23,7 +23,7 @@ Database:
 
 > * Two versions of the Interface will be made:
 > * 	Version 0 console version that will allow users to enter in the desired moon phase and date.			
-> * 	Version 1 Web App Mudblazor Web App with all the underneath features implemented interfaced with Mudblazor.
+> * 	Version 1 Winui3 Web App with all the underneath features implemented interfaced with Mudblazor.
 
 > # Technologies and APIs:
 	Languages:
