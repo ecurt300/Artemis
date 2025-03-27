@@ -33,7 +33,7 @@ Database:
 	Frameworks:
 > * EFCore for entities and Database Management
 > *		SQLite for Storing Entities
-> *		Mudblazor for User Interface and Web
+> *		WINUI3 for User Interface
 
 Task List:
 
@@ -60,10 +60,22 @@ Based on what is needed and the functionalities of the project I have determined
 >---
 > | Feature | Difficulty |
 >--
-> CRUD(Create, Read, and Update) -Medium/Hard
->  Three Unit Tests -Easy
->  Comments -Easy
->  Two or more Tables -Hard
+>   CRUD(Create, Read, and Update) -Medium/Hard
+>   Three Unit Tests -Easy
+>   Comments -Easy
 >   List or Dictionary added -Easy
->   Regex - Medium
+>
 >   --
+>
+How to run:
+1 Download the VS Studio 2022 solution and clone to your desktop.
+2 Run the vs studio 2022 command line run the following:
+	#dotnet ef migrations add InitialCreate to create the migration
+ 	#dotnet ef database update to create the database
+  	#make sure you have the Moons.db in your userpath 
+3 Running the app:
+	#Run the program by running ArtemisUI in the app 
+ 	<img width="955" alt="Artemis App UI Start" src="https://github.com/user-attachments/assets/32bfab0c-e990-4292-8998-fd2fa3fe119d" />
+  	#The UI is not the pretteist atm. But there exists two buttons
+<img width="236" alt="Instructions" src="https://github.com/user-attachments/assets/ff330a9b-743a-430d-97d3-1b5126ea0f65" />
+Make sure to use db browser to ensure the database is filled.
