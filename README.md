@@ -75,7 +75,8 @@ How to run:
   	#make sure you have the Moons.db in your userpath 
 3 Running the app:
 	#Run the program by running ArtemisUI in the app 
- 	<img width="955" alt="Artemis App UI Start" src="https://github.com/user-attachments/assets/32bfab0c-e990-4292-8998-fd2fa3fe119d" />
+ 	
   	#The UI is not the pretteist atm. But there exists two buttons
-<img width="236" alt="Instructions" src="https://github.com/user-attachments/assets/ff330a9b-743a-430d-97d3-1b5126ea0f65" />
+<img widt<img width="224" alt="RunArtemis" src="https://github.com/user-attachments/assets/6b665020-f70d-4097-ac6d-9ff6ef1ef70c" />
+h="236" alt="Instructions" src="https://github.com/user-attachments/assets/ff330a9b-743a-430d-97d3-1b5126ea0f65" />
 Make sure to use db browser to ensure the database is filled.
