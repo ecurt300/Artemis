@@ -11,19 +11,16 @@ Features:
 > # Technical:
 
 Entities:
-> There exists three entities in this program.	
->	1. Date→ Holds the Day, and Year entered or stored
->	2. Moon → Holds the Moon Phase , and a Date object reference.
->	3. Moon Results→ Holds the Moon , and Date data of the found moon phase and date.
+> There exists one entity in this program.	
+>	1. Moon → Holds the Moon Phase , and a Date object reference.
 
 Database:
-	There exists two databases:
+	There exists one database:
 > * 1. The moon phase database, this contains the moon phase data from the API call to the U.S. Naval Observatory.
-  > *  2.  All results→ This is for debugging and logging purposes to show all the results found with the app.
 
 > * Two versions of the Interface will be made:
 > * 	Version 0 console version that will allow users to enter in the desired moon phase and date.			
-> * 	Version 1 Web App Mudblazor Web App with all the underneath features implemented interfaced with Mudblazor.
+> * 	Version 1 Winui3 Web App with all the underneath features implemented interfaced with Mudblazor.
 
 > # Technologies and APIs:
 	Languages:
@@ -33,7 +30,7 @@ Database:
 	Frameworks:
 > * EFCore for entities and Database Management
 > *		SQLite for Storing Entities
-> *		Mudblazor for User Interface and Web
+> *		WINUI3 for User Interface
 
 Task List:
 
@@ -60,10 +57,22 @@ Based on what is needed and the functionalities of the project I have determined
 >---
 > | Feature | Difficulty |
 >--
-> CRUD(Create, Read, and Update) -Medium/Hard
->  Three Unit Tests -Easy
->  Comments -Easy
->  Two or more Tables -Hard
+>   CRUD(Create, Read, and Update) -Medium/Hard
+>   Three Unit Tests -Easy
+>   Comments -Easy
 >   List or Dictionary added -Easy
->   Regex - Medium
+>
 >   --
+>
+How to run:
+* Download the VS Studio 2022 solution and clone to your desktop.
+* Run the vs studio 2022 command line run the following:
+* dotnet ef migrations add InitialCreate to create the migration
+* dotnet ef database update to create the database
+#make sure you have the Moons.db in your userpath 
+Running the app:
+* Run the program by running ArtemisUI in the app
+* The UI is not the pretteist atm. But there exists two buttons
+<img widt<img width="224" alt="RunArtemis" src="https://github.com/user-attachments/assets/6b665020-f70d-4097-ac6d-9ff6ef1ef70c" />
+h="236" alt="Instructions" src="https://github.com/user-attachments/assets/ff330a9b-743a-430d-97d3-1b5126ea0f65" />
+Make sure to use db browser to ensure the database is filled.
