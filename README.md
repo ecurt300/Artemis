@@ -76,3 +76,8 @@ Running the app:
 <img widt<img width="224" alt="RunArtemis" src="https://github.com/user-attachments/assets/6b665020-f70d-4097-ac6d-9ff6ef1ef70c" />
 h="236" alt="Instructions" src="https://github.com/user-attachments/assets/ff330a9b-743a-430d-97d3-1b5126ea0f65" />
 Make sure to use db browser to ensure the database is filled.
+
+Make sure you have the following packages:
+
+<img width="563" alt="Nuget1" src="https://github.com/user-attachments/assets/9f353b40-1e95-4a7b-a59b-ab2c4845f7ba" />
+<img width="563" alt="nuget2" src="https://github.com/user-attachments/assets/88a33725-8620-46aa-974a-8da6197327a2" />
