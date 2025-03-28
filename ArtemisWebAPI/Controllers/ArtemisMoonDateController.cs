@@ -4,27 +4,27 @@ namespace ArtemisWebAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class ArtemisMoonDateController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "PartialMoon","FirstQuaterMoon", "FullMoon"
         };
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<ArtemisMoonDateController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public ArtemisMoonDateController(ILogger<ArtemisMoonDateController> logger)
         {
             _logger = logger;
         }
 
         [HttpGet(Name = "GetWeatherForecast/{date}")]
-        public IEnumerable<WeatherForecast> Get(DateTime date)
+        public IEnumerable<MoonDate> Get(DateTime date)
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            return Enumerable.Range(1, 5).Select(index => new MoonDate
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
+                Days = Random.Shared.Next(-20, 55),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();

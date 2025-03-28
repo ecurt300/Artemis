@@ -1,6 +1,6 @@
 @ArtemisWebAPI_HostAddress = http://localhost:5135
 
-GET {{ArtemisWebAPI_HostAddress}}/weatherforecast/
+GET {{ArtemisWebAPI_HostAddress}}/MoonDate/
 Accept: application/json
 
 ###

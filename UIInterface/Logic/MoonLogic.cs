@@ -25,7 +25,7 @@ namespace Artemis.Logic
             //Start from 1700 to 2100 (400 * 2 years)
 
             var id = 0;
-            var years = 1;
+            var years = 800;
             var moonService = application.Services.GetService<IMoonService>();
             var moonPhaseRepository = application.Services.GetService<IMoonPhaseRepository>();
             var moons = moonService?.LoopThroughYears(years);
@@ -99,7 +99,7 @@ namespace Artemis.Logic
 
 
 
-                Console.WriteLine(target.ToString());
+              
                 dayCount = (targetDate.Subtract(currentDate).Days);
 
 
